@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login • Krutarth Coaching</title>
+  <link rel="preload" as="image" href="assets/img/logo.jpg">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+  
+<header class="topbar">
+  <div class="container navwrap">
+    <a class="brand" href="index.html">
+      <img src="assets/img/logo.jpg" alt="Krutarth Coaching Logo" class="logo">
+      <div class="brand-text">
+        <span class="brand-title">KRUTARTH</span>
+        <span class="brand-subtitle">Coaching Classes</span>
+      </div>
+    </a>
+    <button class="hamburger" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav id="navMenu" class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="courses.html">Courses</a>
+      <a href="timings.html">Timings</a>
+      <a href="branches.html">Branches</a>
+      <a href="register.html">Registration</a>
+      <a href="login.html">Login</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+  
+<section class="section">
+  <div class="container grid grid-2">
+    <div class="card">
+      <h2>Login</h2>
+      <div id="loginMsg" class="alert"></div>
+      <form id="loginForm" class="form">
+        <div><label>Login as</label>
+          <select name="role" required>
+            <option value="student">Student</option>
+            <option value="teacher">Teacher</option>
+            <option value="admin">Admin</option>
+          </select>
+        </div>
+        <div><label>Email</label><input type="email" name="email" required></div>
+        <div><label>Password</label><input type="password" name="password" required></div>
+        <button class="btn" type="submit">Login</button>
+      </form>
+      <p class="helper">New here? <a href="register.html">Create an account</a></p>
+    </div>
+    <div class="card">
+      <h2>Note</h2>
+      <p class="helper">Admin users can be added manually later on server. Demo ke liye student/teacher register karke login karein.</p>
+    </div>
+  </div>
+</section>
+
+  
+<footer class="footer">
+  <div class="container footgrid">
+    <div>
+      <h4>Krutarth Coaching Classes</h4>
+      <p>Your Success, Our Responsibility</p>
+      <p class="helper">Mon–Sat: 7:00 AM – 9:00 PM</p>
+    </div>
+    <div>
+      <h4>Branches</h4>
+      <ul>
+        <li>Main: Attaisa Market, Gonda</li>
+        <li>Second: Shiva Ganj Bazar, Gonda</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>📞 +91-90000-00000</p>
+      <p>✉️ info@krutarthclasses.in</p>
+      <button id="logoutBtn" class="btn outline small hidden">Logout</button>
+    </div>
+  </div>
+  <div class="copyright">© <span id="year"></span> Krutarth Coaching Classes. All rights reserved.</div>
+</footer>
+<script src="assets/js/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+/* Basic reset and fluid images */
+* { box-sizing: border-box; }
+img, video { max-width: 100%; height: auto; display: block; }
+
+/* Container utility */
+.container { width: min(1100px, 92%); margin-inline: auto; }
+
+/* Responsive typography */
+html { font-size: 16px; }
+@media (max-width: 1024px) { html { font-size: 15px; } }
+@media (max-width: 768px)  { html { font-size: 14px; } }
+@media (max-width: 480px)  { html { font-size: 13px; } }
+
+/* Navbars: stack on mobile */
+.nav, nav, .navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .75rem;
+}
+.nav ul, nav ul, .navbar ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .75rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .nav, nav, .navbar { flex-direction: column; align-items: stretch; }
+  .nav ul, nav ul, .navbar ul { flex-direction: column; gap: .5rem; }
+}
+
+/* Grid helpers: auto-fit columns */
+.grid { display: grid; gap: 1rem; grid-template-columns: repeat(12, 1fr); }
+.grid-2 { display: grid; gap: 1rem; grid-template-columns: repeat(2, 1fr); }
+.grid-3 { display: grid; gap: 1rem; grid-template-columns: repeat(3, 1fr); }
+.grid-4 { display: grid; gap: 1rem; grid-template-columns: repeat(4, 1fr); }
+
+@media (max-width: 1024px) {
+  .grid-4 { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 768px) {
+  .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .grid-2 { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .grid, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+}
+
+/* Hero sections */
+.hero {
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+  grid-template-columns: 1.2fr 1fr;
+  padding: clamp(1rem, 3vw, 3rem) 0;
+}
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; text-align: center; }
+}
+
+/* Tables: make scrollable on small screens */
+.responsive-table { width: 100%; border-collapse: collapse; }
+.responsive-table th, .responsive-table td { padding: .75rem; border-bottom: 1px solid #ddd; }
+.responsive-table-wrapper { width: 100%; overflow-x: auto; }
+.responsive-table-wrapper table { min-width: 600px; }
+
+/* Forms */
+input[type="text"], input[type="email"], input[type="password"], select, textarea {
+  width: 100%; padding: .7rem .9rem; border: 1px solid #ccc; border-radius: .5rem;
+}
+
+/* Utility spacing */
+.section { padding: clamp(1.25rem, 4vw, 4rem) 0; }
+.stack > * + * { margin-top: clamp(.5rem, 2vw, 1rem); }
+
+/* Footer */
+footer { margin-top: 2rem; }
